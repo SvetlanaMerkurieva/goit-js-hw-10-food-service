@@ -1,3 +1,5 @@
+import cardsData from "./temlate.hbs";
+import cards from "./menu.json";
 import "./styles.css";
 
 const inputToggle = document.querySelector('#theme-switch-toggle');
@@ -18,3 +20,5 @@ function currentTheme() {
         inputToggle.checked = true;
     }
 }
+const cardsUl = document.querySelector(".js-menu");
+cardsUl.innerHTML = cardsData(cards);
